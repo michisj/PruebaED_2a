@@ -1,71 +1,87 @@
 package ed.examen.modelo;
 
-public class Persona{
-	
+public class Persona {
+
 	private String dni;
 	private String nombre;
 	private String apellido1;
-	
-	public Persona() {}
-	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+
+	public Persona() {
+	}
+
+	/**
+	 * Crea una persona
+	 * 
+	 * @param dni       dni de la persona
+	 * @param nombre    nombre de la persona
+	 * @param apellido1 apellido de la persona
+	 */
 	public Persona(String dni, String nombre, String apellido1) {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido1 = apellido1;
 	}
-	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+
+	/**
+	 * Devuelve el dni
+	 * 
+	 * @return el dni de la persona
+	 */
 	public String getDni() {
 		return dni;
 	}
-	
-	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+
+	/**
+	 * almacena el dni de la persona
+	 * 
+	 * @param dni el dni de la persona
+	 * @throws Exception El ultimo caracter introducido no es una letra
+	 */
 	public void setDni(String dni) throws Exception {
-		//comprobacion de si el ultimo caracter es una letra
-		if(Character.isLetter(dni.charAt(dni.length()))) {
-			this.dni=dni;
-		}else {
+		// comprobacion de si el ultimo caracter es una letra
+		if (Character.isLetter(dni.charAt(dni.length()))) {
+			this.dni = dni;
+		} else {
 			throw new Exception("El ultimo caracter introducido no es una letra");
 		}
 	}
-	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+
+	/**
+	 * Devuelve el nombre
+	 * 
+	 * @return el nombre de la persona
+	 */
 	public String getNombre() {
 		return nombre;
 	}
-	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+
+	/**
+	 * almacena el nombre de la persona
+	 * 
+	 * @param nombre el nombre de la persona
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+
+	/**
+	 * Devuelve el apellido
+	 * 
+	 * @return el apellido de la persona
+	 */
 	public String getApellido1() {
 		return apellido1;
 	}
-	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+
+	/**
+	 * almacena el apellido de la persona
+	 * 
+	 * @param apellido1 el apellido de la persona
+	 */
 	public void setApellido1(String apellido1) {
 		this.apellido1 = apellido1;
 	}
-	
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -73,6 +89,7 @@ public class Persona{
 		result = prime * result + ((dni == null) ? 0 : dni.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -94,6 +111,5 @@ public class Persona{
 	public String toString() {
 		return "Persona [dni=" + dni + ", nombre=" + nombre + "]";
 	}
-	
 
 }
