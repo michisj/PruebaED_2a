@@ -2,7 +2,11 @@ package ed.examen.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Curso de personas
+ * @author Miguel San Juan
+ *
+ */
 public class Curso {
 
 	private List<Persona> listaAlumnos;

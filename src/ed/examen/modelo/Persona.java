@@ -1,5 +1,9 @@
 package ed.examen.modelo;
-
+/**
+ * Personas de un curso
+ * @author Miguel San Juan
+ *
+ */
 public class Persona {
 
 	private String dni;
