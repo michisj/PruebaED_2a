@@ -23,4 +23,14 @@ public class PersonaTest {
 		assertEquals("San Juan", miguel.getApellido1());
 	}
 
+	@Test
+	public void setDniTest() {
+		try {
+			miguel.setDni("12345678L");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		assertEquals("12345678L", miguel.getDni());
+
+	}
 }
