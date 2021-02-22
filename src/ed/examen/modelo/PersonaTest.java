@@ -44,4 +44,15 @@ public class PersonaTest {
 		assertEquals("Antonio", miguel.getNombre());
 
 	}
+
+	@Test
+	public void setApellido1Test() {
+		try {
+			miguel.setApellido1("Ocina");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		assertEquals("Ocina", miguel.getApellido1());
+
+	}
 }
