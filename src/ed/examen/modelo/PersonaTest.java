@@ -13,4 +13,8 @@ public class PersonaTest {
 		assertEquals("11111111L", miguel.getDni());
 	}
 
+	@Test
+	public void getNombreTest() {
+		assertEquals("Miguel", miguel.getNombre());
+	}
 }
