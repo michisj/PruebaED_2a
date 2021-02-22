@@ -17,4 +17,10 @@ public class PersonaTest {
 	public void getNombreTest() {
 		assertEquals("Miguel", miguel.getNombre());
 	}
+
+	@Test
+	public void getApellido1Test() {
+		assertEquals("San Juan", miguel.getApellido1());
+	}
+
 }
