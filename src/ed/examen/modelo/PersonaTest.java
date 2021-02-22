@@ -55,4 +55,13 @@ public class PersonaTest {
 		assertEquals("Ocina", miguel.getApellido1());
 
 	}
+
+	@Test
+	public void ContructorPersonaTest() {
+		Persona Antonio = new Persona("11111551L", "Antonio", "Sanz");
+		assertEquals("11111551L", Antonio.getDni());
+		assertEquals("Antonio", Antonio.getNombre());
+		assertEquals("Sanz", Antonio.getApellido1());
+
+	}
 }
