@@ -35,4 +35,17 @@ public class CursoTest {
 		assertFalse(micurso.estaRegistrado(Antonio.getDni()));
 
 	}
+
+	@Test
+	public void aniadirAlumnoTest() {
+		Integer Numerodealumnosantes = micurso.numeroAlumnos();
+
+		Persona miguel = new Persona("11111111L", "Miguel", "San Juan");
+		micurso.aniadirAlumno(miguel);
+
+		assertEquals(Numerodealumnosantes.intValue() + 1, micurso.numeroAlumnos().intValue());
+		assertTrue(micurso.estaRegistrado(miguel.getDni()));
+
+	}
+
 }
