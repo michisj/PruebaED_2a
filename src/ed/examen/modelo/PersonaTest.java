@@ -1,6 +1,7 @@
 package ed.examen.modelo;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
@@ -59,6 +60,7 @@ public class PersonaTest {
 	@Test
 	public void ContructorPersonaTest() {
 		Persona Antonio = new Persona("11111551L", "Antonio", "Sanz");
+		assertNotNull(Antonio);
 		assertEquals("11111551L", Antonio.getDni());
 		assertEquals("Antonio", Antonio.getNombre());
 		assertEquals("Sanz", Antonio.getApellido1());
