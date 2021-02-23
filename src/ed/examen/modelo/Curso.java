@@ -2,8 +2,10 @@ package ed.examen.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * Curso de personas
+ * 
  * @author Miguel San Juan
  *
  */
@@ -73,5 +75,9 @@ public class Curso {
 		for (Persona persona : listaAlumnos) {
 			System.out.println(persona);
 		}
+	}
+
+	public List<Persona> getListaAlumnos() {
+		return listaAlumnos;
 	}
 }

@@ -2,6 +2,7 @@ package ed.examen.modelo;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -13,6 +14,14 @@ public class CursoTest {
 	@Test
 	public void numeroAlumnosTest() {
 		assertEquals(micurso.numeroAlumnos(), new Integer(0));
+	}
+
+	@Test
+	public void ContructorCursoTest() {
+		Curso curso = new Curso();
+		assertNotNull(curso);
+		assertNotNull(curso.getListaAlumnos());
+
 	}
 
 	@Test
