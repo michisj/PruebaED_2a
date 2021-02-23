@@ -48,4 +48,19 @@ public class CursoTest {
 
 	}
 
+	@Test
+	public void eliminarAlumnoTest() throws Exception {
+
+		Persona miguel = new Persona("11111111L", "Miguel", "San Juan");
+		micurso.aniadirAlumno(miguel);
+
+		Integer Numerodealumnosantes = micurso.numeroAlumnos();
+
+		micurso.eliminarAlumno(miguel.getDni());
+
+		assertEquals(Numerodealumnosantes.intValue() - 1, micurso.numeroAlumnos().intValue());
+		assertFalse(micurso.estaRegistrado(miguel.getDni()));
+
+	}
+
 }
